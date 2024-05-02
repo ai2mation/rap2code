@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang"en" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Rapid 2 Code</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+  <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+  <div>
+    <h2>Wizard</h2>
+    <table style="width:100%" >
+      <tr>
+        <td>
+          <table style="width:100%" >
+            <tr>
+              <td>
+                <a href="#" th:href="@{/wizardAdd}"><button type="button">Add</button></a>
+                <a href="#" th:href="@{/wizardClear}"><button type="button">Clear</button></a>
+                <a href="#" th:href="@{/home}"><button type="button">Filter</button></a>
+                <a href="#" th:href="@{/wizardGenerate}"><button type="button">Generate</button></a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <table cellpadding="2" border="1" >
+            <tr>
+              <td>
+                <a href="#" th:href="@{/home}"><button type="button">Show by</button></a>
+                <a href="#" th:href="@{/home}"><button type="button">Layer</button></a>
+                <a href="#" th:href="@{/home}"><button type="button">Envelop</button></a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ul role="tree" aria-labelledby="tree1">
+                  <li role="treeitem" aria-level="1" aria-setsize="3" aria-posinset="1" aria-expanded="false">
+                    <span th:text="${facet.name}">facet</span>
+                    <ul>
+                      <li role="treeitem" aria-level="2" aria-setsize="5" aria-posinset="3" aria-expanded="false" th:each="types : ${facet.types}">
+                        <span th:text="${types.type}">type</span>
+                        <ul role="group">
+                          <li role="none" th:each="unit : ${types.units}">
+                            <a role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="1" th:href="@{'/rename/' + ${unit.id}}">
+                              <span style="color:white;background-color:blue" th:text="| R |">...</span>
+                            </a>
+                            <a role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="1" th:href="@{'/delete/' + ${unit.id}}">
+                              <span style="color:white;background-color:red" th:text="| X |">...</span>
+                            </a>
+                            <a role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="1" th:href="@{'/delete/' + ${unit.id}}">
+                              <span style="color:black;background-color:yellow" th:text="| ? |">...</span>
+                            </a>
+                            <a role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="1" th:href="@{'/gen/' + ${unit.id}}">
+                              <span style="color:white;background-color:teal" th:text="${unit.name}">...</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td valign="top">
+          <table cellpadding="2" border="1" valign="top">
+            <tr>
+              <td>
+                <a href="#" th:href="@{/home}"><button type="button">Add Interface</button></a>
+                <a href="#" th:href="@{/home}"><button type="button">Change Parent</button></a>
+                <a href="#" th:href="@{/home}"><button type="button">Add Method</button></a>
+                <a href="#" th:href="@{/home}"><button type="button">Merge</button></a>
+                <a href="#" th:href="@{/home}"><button type="button">Refactor</button></a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span style="white-space: pre-wrap" th:text="${artifact}"></span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

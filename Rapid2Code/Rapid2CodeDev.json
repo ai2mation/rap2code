@@ -1,0 +1,26 @@
+{
+  "configurations": {
+	"r2cdb":
+	{
+		"UserName":"root",
+		"Password":"Thunder13!",
+		"Url":"jdbc:mysql://localhost:3306/r2cdb",
+		"PoolMaxSize":"10",
+		"PoolMinSize":"5",
+		"PoolPreferedSize":"6",
+		"DebugLevel":"None",
+		"IdleTimeOutMilli":"10000",
+		"CapacityIncrement":"1",
+		"ShrinkFrequencySeconds":"900",
+		"Test Table Name":"dual",
+		"FetchSize":"100",
+		"MaxWaitTime2GetCon":"11"
+
+	},
+		"anotherdb":
+	{
+		"UserName":"2 username",
+		"Password":"2 password"
+	}
+}
+}

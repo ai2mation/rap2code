@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/guru.css"
+          th:href="@{css/guru.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+
+<div class="container">
+  <div th:fragment="header">
+    <div class="row text-center">
+      <img src="../../static/images/rapid2code.gif" width="1150" th:src="@{/images/rapid2code.gif}"/>
+     </div>
+     <nav class="navbar navbar-default">
+     
+       <div class="dropdown" style="float:left">
+         Free&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/home}">Home</a></li>
+             <li><a href="#" th:href="@{/ProcJavaFile}">Process Java File</a></li>
+             <li><a href="#" th:href="@{/ProcZipFile}">Process Zip File</a></li>
+           </ul>
+         </div>
+       </div>
+
+       <div class="dropdown" style="float:left">
+         Profile&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/home}">Home</a></li>
+             <li><a href="#" th:href="@{/}">Login</a></li>
+             <li><a href="#" th:href="@{/register}">Register</a></li>
+             <li><a href="#" th:href="@{/}">User List</a></li>
+             <li><a href="#" th:href="@{/product/new}">Create User</a></li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="dropdown" style="float:left">
+         Interactive Tutorial&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/}">Basic Java</a></li>
+             <li><a href="#" th:href="@{/}">Spring Boot</a></li>
+           </ul>
+         </div>
+       </div>
+       
+       
+       <div class="dropdown" style="float:left">
+         Token&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/}">Free 24hr Token</a></li>
+             <li><a href="#" th:href="@{/}">One Time 1 week Token</a></li>
+             <li><a href="#" th:href="@{/product/new}">Yearly Token</a></li>
+           </ul>
+         </div>
+       </div>
+       <div class="dropdown" style="float:left">
+         Organization&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/}">Default Organizations</a></li>
+             <li><a href="#" th:href="@{/}">Your Organizations</a></li>
+             <li><a href="#" th:href="@{/product/new}">Create Organization</a></li>
+           </ul>
+         </div>
+       </div>
+
+       <div class="dropdown" style="float:left">
+         Roles&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/}">Views Roles</a></li>
+             <li><a href="#" th:href="@{/product/new}">Create Roles</a></li>
+             <li><a href="#" th:href="@{/}">Role Names</a></li>
+             <li><a href="#" th:href="@{/}">Assigned Roles</a></li>
+             <li><a href="#" th:href="@{/}">Views Roles</a></li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="dropdown" style="float:left">
+         Relationships&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/}">Relationship</a></li>
+             <li><a href="#" th:href="@{/}">Relattionship Type</a></li>
+             <li><a href="#" th:href="@{/product/new}">Create Organization</a></li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="dropdown" style="float:left">
+         Blueprints&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/}">Blueprint List</a></li>
+             <li><a href="#" th:href="@{/product/new}">Create Blueprints</a></li>
+              <li><a href="#" th:href="@{/wizard}">Wizard</a></li>
+             <li><a href="#" th:href="@{/importjava}">Import Java</a></li>
+             <li><a href="#" th:href="@{/importexcel}">Import Excel</a></li>
+             <li><a href="#" th:href="@{/findjava}">Find Java</a></li>
+             <li><a href="#" th:href="@{/}">Export</a></li>
+           </ul>
+         </div>
+       </div>
+
+       <div class="dropdown" style="float:left">
+         Catalog&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/products}">Products</a></li>
+             <li><a href="#" th:href="@{/product/new}">Create Product</a></li>
+           </ul>
+         </div>
+       </div>
+
+       <div class="dropdown" style="float:left">
+         Patterns&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/products}">Pattern</a></li>
+             <li><a href="#" th:href="@{/product/new}">Create Pattern</a></li>
+             <li><a href="#" th:href="@{/}">Controller</a></li>
+             <li><a href="#" th:href="@{/}">Service</a></li>
+             <li><a href="#" th:href="@{/}">Domain</a></li>
+             <li><a href="#" th:href="@{/}">Entity</a></li>
+             <li><a href="#" th:href="@{/}">Repository</a></li>
+             <li><a href="#" th:href="@{/}">Entity</a></li>
+             <li>________________</li>
+             <li><a href="#" th:href="@{/}">Builder</a></li>
+             <li><a href="#" th:href="@{/}">Class</a></li>
+             <li><a href="#" th:href="@{/}">Delegate Method</a></li>
+             <li><a href="#" th:href="@{/}">Dependency</a></li>
+             <li><a href="#" th:href="@{/}">Element</a></li>
+             <li>________________</li>
+             <li><a href="#" th:href="@{/}">Field</a></li>
+             <li><a href="#" th:href="@{/}">Folder</a></li>
+             <li><a href="#" th:href="@{/}">Interface</a></li>
+             <li><a href="#" th:href="@{/}">Libraries</a></li>
+             <li><a href="#" th:href="@{/}">Method</a></li>
+             <li><a href="#" th:href="@{/}">Package</a></li>
+             <li><a href="#" th:href="@{/}">Plugin</a></li>
+             <li><a href="#" th:href="@{/}">Plugin Repository</a></li>
+             <li>________________</li>
+             <li><a href="#" th:href="@{/}">Root Element</a></li>
+             <li><a href="#" th:href="@{/}">Type</a></li>
+             <li><a href="#" th:href="@{/}">Version</a></li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="dropdown" style="float:left">
+         Generate&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/products}">Contents</a></li>
+             <li><a href="#" th:href="@{/product/new}">Search</a></li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="dropdown" style="float:left">
+         Search&nbsp;|&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+             <li><a href="#" th:href="@{/products}">Contents</a></li>
+             <li><a href="#" th:href="@{/product/new}">Search</a></li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="dropdown" style="float:left">
+         Help&nbsp;</h3>
+         <div class="dropdown-content">
+           <ul>
+            <li><a href="#" th:href="@{/products}">About</a></li>
+             <li><a href="#" th:href="@{/products}">Contents</a></li>
+             <li><a href="#" th:href="@{/product/new}">Search</a></li>
+           </ul>
+         </div>
+       </div>
+    </nav>
+    <hr style="height:2px;border-width:0;color:gray;background-color:blue">
+  </div>
+</div>
+</body>
+</html>

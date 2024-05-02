@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Rapid 2 Code</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<h1>List of Pattern Units</h1>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Version</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="unit : ${patternUnitModel}">
+                <td th:text="${unit.id}">ID</td>
+                <td th:text="${unit.name}">Item Name</td>
+                <td th:text="${unit.type}">Quantity</td>
+                <td th:text="${unit.version}">Amount</td>
+                <td th:text="${unit.description}">Amount</td>
+                <td>
+                    <a th:href="@{'/gen/' + ${unit.id}}">gen</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Rapid 2 Code</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<h1> Select Java</h1>
+<form action="#" th:action="@{/SelectJava}" th:object="${patternUnitModel}" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" th:field="*{name}" /></td>
+                </tr>                          
+                <tr>
+                    <td colspan="2"><button type="submit">Search</button> </td>
+                </tr>
+            </table>
+    </form>
+</div>
+</body>
+</html>

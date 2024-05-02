@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Rapid 2 Code</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<h1> Pattern Unit QA</h1>
+    <form action="#" th:action="@{/patternUnitQA}" th:object="${patternUnitQA}" method="post">
+    <input type="hidden" th:field="*{id}" id="id"/>
+        <table border="1">
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="qa : ${QuestionAnswer}">
+                <td th:text="${qa.question}">ID</td>
+                <td>
+                  <input type="text" th:field="*{answer}" th:value="${qa.id}">
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        <p>
+            <button type="submit">Next</button>
+        </p>
+    </form>
+</div>
+</body>

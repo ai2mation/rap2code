@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Rapid 2 Code</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+<h1> File Upload (*.java)</h1>
+<form th:action="@{/ImportJava}" method="post" enctype="multipart/form-data">
+  <table border="0" cellpadding="5">
+    <tr>
+      <th>Select Import File:&nbsp;&nbsp;</th>
+        <td>
+          <input type="file" th:name="file" accept=".java"/>
+         </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input th:type="submit" value="Upload Java File" />
+        </td>
+      </tr>
+   </table>
+</form>
+
+</div>
+
+</body>
+</html>

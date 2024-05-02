@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!--  div th:fragment="footer" th:align="center" -->
+    <div th:fragment="footer" class="container">
+    <p>&copy; 2021 Rapid 2 Code, Datathunder inc or its affiliates</p>
+    <!--  
+        &copy; <span th:text="${#temporals.format(#temporals.createNow(), 'yyyy')}">2017</span>
+        -->
+    </div>
+</body>
+</html>

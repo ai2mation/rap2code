@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Rapid 2 Code</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+<h1> Excel File Upload</h1>
+<form th:action="@{/ExcelImport}" method="post" enctype="multipart/form-data">
+  <table border="0" cellpadding="5">
+    <tr>
+      <th>Select Excel File:&nbsp;&nbsp;</th>
+        <td>
+          <input type="file" th:name="file" />
+         </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input th:type="submit" value="Upload Excel File" />
+        </td>
+      </tr>
+   </table>
+</form>
+
+</div>
+
+</body>
+</html>
