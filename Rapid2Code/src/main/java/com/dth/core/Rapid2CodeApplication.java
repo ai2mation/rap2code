@@ -32,6 +32,7 @@ import com.dth.fmw.logger.SmartLogger;
 @SpringBootApplication
 public class Rapid2CodeApplication {
 
+	
 	public static void main(String[] args) {
 		SmartLogger.setTraceLevel(3);
 		SmartLogger.setDebugLevel(1);
